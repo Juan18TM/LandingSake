@@ -159,9 +159,10 @@ export default function Hero() {
             animation: 'fade-up .55s cubic-bezier(.22,1,.36,1) .24s both',
           }}>
             <PrimaryBtn
-              href="/SakeAnime.Setup.exe"
+              href="https://1drv.ms/u/c/a8a6637d98513c41/IQDR5f2FXfUHQoyD7GG4Lk6JAVzv6P-USSEAUP77zowYgY4"
               id="btn-download-hero"
-              download="SakeAnime.Setup.exe"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <DownloadIcon />
               Descargar .exe
@@ -203,12 +204,14 @@ export default function Hero() {
 }
 
 /* ── Shared button components ── */
-function PrimaryBtn({ href, id, download, children }: { href: string; id?: string; download?: string; children: React.ReactNode }) {
+function PrimaryBtn({ href, id, download, target, rel, children }: { href: string; id?: string; download?: string; target?: string; rel?: string; children: React.ReactNode }) {
   return (
     <a
       href={href}
       id={id}
       download={download}
+      target={target}
+      rel={rel}
       style={{
         display: 'inline-flex', alignItems: 'center', gap: 10,
         padding: '14px 28px',

@@ -159,9 +159,10 @@ export default function Install() {
             ¿Prefieres instalar manualmente?
           </p>
           <a
-            href="/SakeAnime.Setup.exe"
+            href="https://1drv.ms/u/c/a8a6637d98513c41/IQDR5f2FXfUHQoyD7GG4Lk6JAVzv6P-USSEAUP77zowYgY4"
             id="btn-download-manual"
-            download="SakeAnime.Setup.exe"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: 12,
               padding: '16px 40px',
