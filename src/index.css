@@ -1,0 +1,38 @@
+/* ============================================================
+   SakeAnime Landing — Design System (mismo que la app)
+   ============================================================ */
+
+:root {
+  --bg:            #080B12;
+  --surface:       #11151D;
+  --card:          #181E28;
+  --card-hover:    #1E2636;
+  --primary:       #FF6B8A;
+  --primary-hover: #FF8DA5;
+  --muted:         #A1A1AA;
+  --outline:       rgba(255, 255, 255, 0.08);
+  --font-sans:     'Inter', 'Noto Sans JP', sans-serif;
+  --font-display:  'Shippori Mincho', 'Noto Sans JP', serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: #fff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+
+::selection { background: rgba(255, 107, 138, 0.3); color: #fff; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--card-hover); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 107, 138, 0.5); }
