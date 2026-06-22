@@ -9,6 +9,56 @@ const css = `
 @keyframes pulse-dot   { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.75)} }
 @keyframes glow-pulse  { 0%,100%{opacity:.55} 50%{opacity:1} }
 @keyframes scroll-anim { 0%{transform:scaleY(0);transform-origin:top} 50%{transform:scaleY(1);transform-origin:top} 51%{transform:scaleY(1);transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
+
+.hero-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero-btn-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: fade-up .55s cubic-bezier(.22,1,.36,1) .24s both;
+}
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding: 60px 20px 48px;
+    gap: 32px;
+    text-align: center;
+  }
+  .hero-text {
+    align-items: center;
+  }
+  .hero-btn-row {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .hero-grid {
+    padding: 56px 16px 40px;
+  }
+  .hero-btn-row {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-btn-row a {
+    width: 100%;
+    justify-content: center;
+  }
+}
 `
 
 
@@ -87,18 +137,9 @@ export default function Hero() {
 
 
       {/* — Main content — */}
-      <div style={{
-        maxWidth: 1200, margin: '0 auto',
-        padding: '80px 48px',
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: 80,
-        alignItems: 'center',
-        position: 'relative',
-        zIndex: 1,
-      }}>
+      <div className="hero-grid">
         {/* Left: text */}
-        <div>
+        <div className="hero-text">
           {/* Badge */}
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: 8,
@@ -154,10 +195,7 @@ export default function Hero() {
             ver anime en Windows. Sin anuncios.
           </p>
 
-          <div style={{
-            display: 'flex', gap: 16, flexWrap: 'wrap',
-            animation: 'fade-up .55s cubic-bezier(.22,1,.36,1) .24s both',
-          }}>
+          <div className="hero-btn-row">
             <PrimaryBtn
               href="https://1drv.ms/u/c/a8a6637d98513c41/IQDR5f2FXfUHQoyD7GG4Lk6JAVzv6P-USSEAUP77zowYgY4"
               id="btn-download-hero"

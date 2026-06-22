@@ -9,7 +9,7 @@ export default function Footer() {
       }}
     >
       <div style={{
-        maxWidth: 1200, margin: '0 auto', padding: '0 48px',
+        maxWidth: 1200, margin: '0 auto', padding: '0 var(--section-px, 48px)',
         display: 'flex', flexDirection: 'column',
         alignItems: 'center', gap: 16, textAlign: 'center',
       }}>
@@ -34,7 +34,7 @@ export default function Footer() {
         </p>
 
         {/* Links */}
-        <div style={{ display: 'flex', gap: 28, marginTop: 4 }}>
+        <div style={{ display: 'flex', gap: 20, marginTop: 4, flexWrap: 'wrap', justifyContent: 'center' }}>
           {[
             { href: 'https://github.com/Juan18TM/SakeAnime', label: 'GitHub', id: 'footer-github' },
             { href: 'https://github.com/Juan18TM/SakeAnime/releases', label: 'Releases', id: 'footer-releases' },

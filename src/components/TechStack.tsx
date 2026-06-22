@@ -113,11 +113,11 @@ export default function TechStack() {
       id="tech"
       ref={ref}
       style={{
-        padding: '110px 0',
+        padding: 'var(--section-py, 110px) 0',
         background: 'linear-gradient(180deg, var(--bg) 0%, var(--surface) 50%, var(--bg) 100%)',
       }}
     >
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 48px' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--section-px, 48px)' }}>
         <SectionHeader
           tag="Tech Stack"
           title="Hecho con lo mejor"

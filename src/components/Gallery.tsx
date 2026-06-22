@@ -7,8 +7,8 @@ export default function Gallery() {
   const inView = useInView(ref)
 
   return (
-    <section id="app-preview" ref={ref} style={{ padding: '110px 0', background: 'var(--surface)' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 48px' }}>
+    <section id="app-preview" ref={ref} style={{ padding: 'var(--section-py, 110px) 0', background: 'var(--surface)' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--section-px, 48px)' }}>
         <SectionHeader
           tag="Visualización app"
           title="Conoce SakeAnime"
@@ -18,8 +18,8 @@ export default function Gallery() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
-          gap: 32,
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
+          gap: 24,
           marginTop: 64,
         }}>
           {['/Home.png', '/Animes.png', '/AnimeCap.png', '/AnimeCap2.png'].map((src, index) => (

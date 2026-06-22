@@ -74,8 +74,8 @@ export default function Features() {
   const inView = useInView(ref)
 
   return (
-    <section id="features" ref={ref} style={{ padding: '110px 0', background: 'var(--bg)' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 48px' }}>
+    <section id="features" ref={ref} style={{ padding: 'var(--section-py, 110px) 0', background: 'var(--bg)' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--section-px, 48px)' }}>
         <SectionHeader
           tag="Features"
           title="Todo lo que necesitas"

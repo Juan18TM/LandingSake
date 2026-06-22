@@ -30,12 +30,12 @@ export default function Install() {
       id="install"
       ref={sectionRef}
       style={{
-        padding: '110px 0',
+        padding: 'var(--section-py, 110px) 0',
         background: 'linear-gradient(180deg, var(--bg) 0%, var(--surface) 50%, var(--bg) 100%)',
         position: 'relative',
       }}
     >
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 48px' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--section-px, 48px)' }}>
 
         {/* Header */}
         <SectionHeader
@@ -129,7 +129,6 @@ export default function Install() {
           </div>
         </div>
 
-        {/* Steps */}
         <div style={{
           display: 'flex', alignItems: 'flex-start', justifyContent: 'center',
           gap: 0, maxWidth: 780, margin: '0 auto 64px', flexWrap: 'wrap',
